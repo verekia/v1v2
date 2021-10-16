@@ -5,17 +5,35 @@
     "packages-dev"
   ],
   "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
     "lerna:publish": "lerna publish -m 'chore: publish'",
     "prepare": "husky install"
+  },
+  "lerna": {
+    "packages": [
+      "packages/*"
+    ],
+    "version": "independent"
+  },
+  "commitlint": {
+    "extends": "@commitlint/config-conventional"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
     "@parcel/packager-ts": "^2.0.0",
     "@parcel/transformer-typescript-types": "^2.0.0",
+    "@types/jest": "^27.0.2",
     "husky": "^7.0.2",
+    "jest": "^27.2.5",
     "lerna": "^4.0.0",
     "parcel": "^2.0.0",
+    "ts-jest": "^27.0.7",
     "typescript": "^4.4.4"
   }
 }
