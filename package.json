@@ -5,6 +5,7 @@
     "packages-dev"
   ],
   "scripts": {
+    "lerna:publish": "lerna publish -m 'chore: publish'",
     "prepare": "husky install"
   },
   "devDependencies": {
