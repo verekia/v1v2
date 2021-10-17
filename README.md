@@ -1,4 +1,14 @@
-# V1V2
+<p align="center">
+    <img src="/website/public/img/logo/v1v2-chevron-text-black-logo.svg" alt="V1V2 Logo" width="300" height="66" />
+
+  <h1 align="center">V1V2</h3>
+
+  <p align="center">
+    Let's upgrade your codebase.
+    <br />
+    <a href="https://www.v1v2.io"><strong>Website »</strong></a>
+  </p>
+</p>
 
 The following packages are available:
 
