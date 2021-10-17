@@ -1,6 +1,6 @@
 {
-  "name": "@v1v2/util",
-  "version": "0.4.0",
+  "name": "@v1v2/chakra",
+  "version": "0.1.0",
   "license": "MIT",
   "source": "src/index.ts",
   "main": "dist/main.js",
@@ -10,5 +10,9 @@
     "watch": "parcel",
     "build": "parcel build",
     "prepublishOnly": "yarn build"
+  },
+  "peerDependencies": {
+    "@chakra-ui/react": ">=1.6.0",
+    "react": ">=16.8.0"
   }
 }
