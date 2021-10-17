@@ -8,7 +8,7 @@
   "types": "dist/types.d.ts",
   "scripts": {
     "watch": "parcel",
-    "build": "parcel build",
+    "build": "rimraf dist && parcel build",
     "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
