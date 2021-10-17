@@ -23,6 +23,11 @@
     "preset": "ts-jest",
     "testEnvironment": "node"
   },
+  "prettier": {
+    "printWidth": 100,
+    "semi": false,
+    "singleQuote": true
+  },
   "dependencies": {
     "@chakra-ui/react": "^1.6.10",
     "@emotion/react": "^11.4.1",
