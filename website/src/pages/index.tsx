@@ -1,4 +1,4 @@
-import { Box, BoxProps, Button, Icon, VStack, StackProps } from '@chakra-ui/react'
+import { Box, BoxProps, Button, Container, Icon, VStack, StackProps } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
 import Logo from 'images/logo.svg'
@@ -20,7 +20,7 @@ const MainButton = ({ href, children, icon, index }) => (
         w="full"
         leftIcon={<Icon as={icon} boxSize={6} mr={2} />}
         justifyContent="left"
-        pl={20}
+        pl={[5, 20]}
       >
         {children}
       </Button>
@@ -29,7 +29,7 @@ const MainButton = ({ href, children, icon, index }) => (
 )
 
 const IndexPage = () => (
-  <Box maxW="300" mx="auto">
+  <Container maxW="330px">
     <Box pt={20} pb={12}>
       <Logo fill="#eee" />
     </Box>
@@ -45,7 +45,7 @@ const IndexPage = () => (
         </MainButton>
       ))}
     </MotionVStack>
-  </Box>
+  </Container>
 )
 
 export default IndexPage
