@@ -6,6 +6,9 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "dependencies": {
+    "next": "^11.1.2"
+  },
   "devDependencies": {
     "@svgr/webpack": "^5.5.0"
   }
