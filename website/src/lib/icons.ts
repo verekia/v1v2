@@ -5,3 +5,5 @@ export {
 } from 'react-icons/fa'
 
 export { GiTeacher as TrainingIcon } from 'react-icons/gi'
+
+export { RiStackFill as StackIcon } from 'react-icons/ri'

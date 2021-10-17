@@ -11,7 +11,7 @@ import {
 import { motion } from 'framer-motion'
 
 import Logo from 'images/logo.svg'
-import { BookIcon, FeatherIcon, GithubIcon, TrainingIcon } from 'lib/icons'
+import { BookIcon, FeatherIcon, GithubIcon, StackIcon, TrainingIcon } from 'lib/icons'
 
 const MotionBox = motion<BoxProps>(Box)
 const MotionVStack = motion<StackProps>(VStack)
@@ -50,6 +50,7 @@ const IndexPage = () => (
         { href: 'https://github.com/v1v2/v1v2', label: 'Open Source', icon: GithubIcon },
         { href: 'https://www.verekia.com/mentoring', label: 'Mentoring', icon: BookIcon },
         { href: 'https://www.verekia.com/training', label: 'Training', icon: TrainingIcon },
+        { href: 'https://stack.v1v2.io', label: 'Stack', icon: StackIcon },
         { href: 'https://www.verekia.com/front-end/', label: 'Blog', icon: FeatherIcon },
       ].map((item, i) => (
         <MainButton href={item.href} icon={item.icon} key={item.label} index={i}>
