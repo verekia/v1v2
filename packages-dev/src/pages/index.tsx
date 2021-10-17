@@ -1,22 +1,24 @@
 import { useEffect } from 'react'
 
+import { Button } from '@chakra-ui/react'
 import { between, exists, either, wait } from '@v1v2/util'
 import { AlertTrigger, ModalTrigger } from '@v1v2/chakra'
+import { LinkButton } from '@v1v2/chakra-next'
 
 const AlertContent = ({ closeAlert, leastDestructiveRef }) => (
   <>
     <div>Are you sure?</div>
-    <button ref={leastDestructiveRef} onClick={closeAlert}>
+    <Button ref={leastDestructiveRef} onClick={closeAlert}>
       Cancel
-    </button>
-    <button onClick={closeAlert}>Yes</button>
+    </Button>
+    <Button onClick={closeAlert}>Yes</Button>
   </>
 )
 
 const ModalContent = ({ closeModal }) => (
   <>
     <div>Modal Content</div>
-    <button onClick={closeModal}>Close</button>
+    <Button onClick={closeModal}>Close</Button>
   </>
 )
 
@@ -34,15 +36,16 @@ const IndexPage = () => {
 
   return (
     <div>
-      <button onClick={handleClick}>Delayed log</button>
-      <ModalTrigger trigger={openModal => <button onClick={openModal}>Open Modal</button>}>
+      <Button onClick={handleClick}>Delayed log</Button>
+      <ModalTrigger trigger={openModal => <Button onClick={openModal}>Open Modal</Button>}>
         {closeModal => <ModalContent closeModal={closeModal} />}
       </ModalTrigger>
-      <AlertTrigger trigger={openAlert => <button onClick={openAlert}>Open Alert</button>}>
+      <AlertTrigger trigger={openAlert => <Button onClick={openAlert}>Open Alert</Button>}>
         {({ closeAlert, leastDestructiveRef }) => (
           <AlertContent closeAlert={closeAlert} leastDestructiveRef={leastDestructiveRef} />
         )}
       </AlertTrigger>
+      <LinkButton href="https://google.com">Google</LinkButton>
     </div>
   )
 }
