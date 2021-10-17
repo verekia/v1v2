@@ -1,15 +1,19 @@
+import { useEffect } from 'react'
+
 import { between, exists, either, wait } from '@v1v2/util'
 import { AlertTrigger, ModalTrigger } from '@v1v2/chakra'
-
-console.log(between(50, 10, 100))
-console.log(exists(''))
-console.log(either('x', 'y', 'x', 'z'))
 
 const IndexPage = () => {
   const handleClick = async () => {
     console.log(await wait())
     console.log('Delayed click')
   }
+
+  useEffect(() => {
+    console.log(between(50, 10, 100))
+    console.log(exists(''))
+    console.log(either('x', 'y', 'x', 'z'))
+  }, [])
 
   return (
     <div>

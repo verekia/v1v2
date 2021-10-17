@@ -7,9 +7,5 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
-  },
-  "dependencies": {
-    "next": "^11.1.2",
-    "react": "^17.0.2"
   }
 }
