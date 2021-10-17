@@ -1,4 +1,13 @@
-import { Box, BoxProps, Button, Container, Icon, VStack, StackProps } from '@chakra-ui/react'
+import {
+  Box,
+  BoxProps,
+  Button,
+  Container,
+  Icon,
+  Heading,
+  VStack,
+  StackProps,
+} from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
 import Logo from 'images/logo.svg'
@@ -30,8 +39,11 @@ const MainButton = ({ href, children, icon, index }) => (
 
 const IndexPage = () => (
   <Container maxW="330px">
-    <Box pt={20} pb={12}>
+    <Box pt={16} pb={12}>
       <Logo fill="#eee" />
+      <Heading as="h2" size="md" textAlign="center" mt={5}>
+        Let's upgrade your codebase
+      </Heading>
     </Box>
     <MotionVStack align="stretch">
       {[
