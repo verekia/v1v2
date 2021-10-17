@@ -3,6 +3,23 @@ import { useEffect } from 'react'
 import { between, exists, either, wait } from '@v1v2/util'
 import { AlertTrigger, ModalTrigger } from '@v1v2/chakra'
 
+const AlertContent = ({ closeAlert, leastDestructiveRef }) => (
+  <>
+    <div>Are you sure?</div>
+    <button ref={leastDestructiveRef} onClick={closeAlert}>
+      Cancel
+    </button>
+    <button onClick={closeAlert}>Yes</button>
+  </>
+)
+
+const ModalContent = ({ closeModal }) => (
+  <>
+    <div>Modal Content</div>
+    <button onClick={closeModal}>Close</button>
+  </>
+)
+
 const IndexPage = () => {
   const handleClick = async () => {
     console.log(await wait())
@@ -19,10 +36,12 @@ const IndexPage = () => {
     <div>
       <button onClick={handleClick}>Delayed log</button>
       <ModalTrigger trigger={openModal => <button onClick={openModal}>Open Modal</button>}>
-        {() => <div>Modal Content</div>}
+        {closeModal => <ModalContent closeModal={closeModal} />}
       </ModalTrigger>
-      <AlertTrigger trigger={openModal => <button onClick={openModal}>Open Alert</button>}>
-        {() => <div>Alert Content</div>}
+      <AlertTrigger trigger={openAlert => <button onClick={openAlert}>Open Alert</button>}>
+        {({ closeAlert, leastDestructiveRef }) => (
+          <AlertContent closeAlert={closeAlert} leastDestructiveRef={leastDestructiveRef} />
+        )}
       </AlertTrigger>
     </div>
   )
