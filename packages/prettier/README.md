@@ -5,3 +5,4 @@ A Prettier configuration that enforces:
 - 100-character lines
 - No semicolons
 - Single quotes
+- Avoiding arrow function parens
