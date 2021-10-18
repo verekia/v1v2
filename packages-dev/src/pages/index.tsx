@@ -50,4 +50,11 @@ const IndexPage = () => {
   )
 }
 
+IndexPage.getWrappers = page => (
+  <div>
+    <nav>Nav</nav>
+    <div>{page}</div>
+  </div>
+)
+
 export default IndexPage

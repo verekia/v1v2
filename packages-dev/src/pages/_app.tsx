@@ -1,9 +1,9 @@
 import { ChakraProvider } from '@chakra-ui/react'
 
+import { wrapPage } from '@v1v2/next'
+
 const App = ({ Component, pageProps }) => (
-  <ChakraProvider>
-    <Component {...pageProps} />
-  </ChakraProvider>
+  <ChakraProvider>{wrapPage(Component, pageProps)}</ChakraProvider>
 )
 
 export default App
