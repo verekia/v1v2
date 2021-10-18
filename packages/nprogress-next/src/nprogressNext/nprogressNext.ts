@@ -1,7 +1,7 @@
 import Router from 'next/router'
-import NProgress, { NProgressOptions } from 'nprogress'
+import NProgress from 'nprogress'
 
-const nprogressNext = (nprogressOptions: Partial<NProgressOptions> & { delay?: number }) => {
+const nprogressNext = (nprogressOptions: any) => {
   NProgress.configure(nprogressOptions)
 
   let lastUrl: string
