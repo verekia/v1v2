@@ -1,6 +1,6 @@
 # @v1v2/react
 
-React components and hooks
+React components and hooks.
 
 ## Installation
 
