@@ -19,4 +19,5 @@ The following NPM packages are available:
 - [**@v1v2/next**](packages/next#readme) – Helpers for [Next](https://nextjs.org/)
 - [**@v1v2/nprogress-next**](packages/nprogress-next#readme) – Integrate [NProgress](https://ricostacruz.com/nprogress/) with [Next](https://nextjs.org/) easily
 - [**@v1v2/react**](packages/react#readme) – React components and hooks
+- [**@v1v2/nanoid**](packages/nanoid#readme) – A lookalike-free Nano ID configuration
 - [**@v1v2/prettier**](packages/prettier#readme) – A Prettier configuration

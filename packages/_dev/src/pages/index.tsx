@@ -5,6 +5,7 @@ import { between, exists, either, wait, defined } from '@v1v2/util'
 import { AlertTrigger, ModalTrigger, MotionBox } from '@v1v2/chakra'
 import { LinkButton } from '@v1v2/chakra-next'
 import { ConditionalWrapper, Defer, useDefer } from '@v1v2/react'
+import { nanoid } from '@v1v2/nanoid'
 
 const AlertContent = ({ closeAlert, leastDestructiveRef }) => (
   <>
@@ -36,6 +37,7 @@ const IndexPage = () => {
     console.log(exists(''))
     console.log(either('x', 'y', 'x', 'z'))
     console.log(defined(null))
+    console.log(nanoid())
   }, [])
 
   return (
