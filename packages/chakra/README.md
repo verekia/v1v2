@@ -1,6 +1,6 @@
 # @v1v2/chakra
 
-Helpers to use with [Chakra UI](https://chakra-ui.com/).
+Helpers for [Chakra UI](https://chakra-ui.com/).
 
 ## Installation
 
