@@ -45,7 +45,7 @@ const IndexPage = () => {
           <AlertContent closeAlert={closeAlert} leastDestructiveRef={leastDestructiveRef} />
         )}
       </AlertTrigger>
-      <LinkButton href="https://google.com">Google</LinkButton>
+      <LinkButton href="/other-page">Other page</LinkButton>
     </div>
   )
 }
