@@ -7,7 +7,14 @@ const config: ThemeConfig = {
 
 const theme = extendTheme({
   config,
-  styles: { global: { body: { background: '#111', color: '#eee' } } },
+  styles: {
+    global: ({ colorMode }) => ({
+      body: {
+        background: colorMode === 'dark' ? '#181818' : '#fff',
+        color: colorMode === 'dark' ? '#e3e3e3' : '#333',
+      },
+    }),
+  },
   components: {
     Button: { baseStyle: { WebkitTapHighlightColor: 'transparent' } },
     Link: { baseStyle: { WebkitTapHighlightColor: 'transparent' } },
