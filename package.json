@@ -7,7 +7,7 @@
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
-    "lerna:publish": "lerna publish -m 'chore: publish'",
+    "lerna:publish": "rimraf .parcel-cache && lerna publish -m 'chore: publish'",
     "prepare": "husky install"
   },
   "lerna": {
