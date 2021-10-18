@@ -1,6 +1,6 @@
 {
   "name": "@v1v2/nprogress-next",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "license": "MIT",
   "source": "src/index.ts",
   "main": "dist/main.js",
