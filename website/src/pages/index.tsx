@@ -1,22 +1,10 @@
-import {
-  Box,
-  BoxProps,
-  Button,
-  Container,
-  Icon,
-  Heading,
-  VStack,
-  StackProps,
-  useColorModeValue,
-} from '@chakra-ui/react'
+import { Box, Button, Container, Icon, Heading, VStack, useColorModeValue } from '@chakra-ui/react'
+import { MotionBox } from '@v1v2/chakra'
+
 import ColorModeToggle from 'components/ColorModeToggle'
-import { motion } from 'framer-motion'
 
 import Logo from 'images/logo.svg'
 import { BookIcon, FeatherIcon, GithubIcon, StackIcon, TrainingIcon } from 'lib/icons'
-
-const MotionBox = motion<BoxProps>(Box)
-const MotionVStack = motion<StackProps>(VStack)
 
 const MainButton = ({ href, children, icon, index }) => (
   <MotionBox
@@ -25,17 +13,19 @@ const MainButton = ({ href, children, icon, index }) => (
     // @ts-ignore
     transition={{ duration: 0.2, delay: index * 0.2 }}
   >
-    <a href={href} target="_blank" rel="noreferrer">
-      <Button
-        size="lg"
-        w="full"
-        leftIcon={<Icon as={icon} boxSize={6} mr={2} />}
-        justifyContent="left"
-        pl={[5, 20]}
-      >
-        {children}
-      </Button>
-    </a>
+    <Button
+      as="a"
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      size="lg"
+      w="full"
+      leftIcon={<Icon as={icon} boxSize={6} mr={2} />}
+      justifyContent="left"
+      pl={[5, 20]}
+    >
+      {children}
+    </Button>
   </MotionBox>
 )
 
@@ -52,7 +42,7 @@ const IndexPage = () => {
             Let's upgrade your codebase
           </Heading>
         </Box>
-        <MotionVStack align="stretch">
+        <VStack align="stretch">
           {[
             { href: 'https://github.com/v1v2/v1v2', label: 'Open Source', icon: GithubIcon },
             { href: 'https://www.verekia.com/mentoring', label: 'Mentoring', icon: BookIcon },
@@ -64,7 +54,7 @@ const IndexPage = () => {
               {item.label}
             </MainButton>
           ))}
-        </MotionVStack>
+        </VStack>
       </Container>
     </>
   )
