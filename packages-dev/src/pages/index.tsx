@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 
 import { Button } from '@chakra-ui/react'
-import { between, exists, either, wait } from '@v1v2/util'
-import { AlertTrigger, ModalTrigger } from '@v1v2/chakra'
+import { between, exists, either, wait, defined } from '@v1v2/util'
+import { AlertTrigger, ModalTrigger, MotionBox } from '@v1v2/chakra'
 import { LinkButton } from '@v1v2/chakra-next'
 import { ConditionalWrapper, Defer, useDefer } from '@v1v2/react'
 
@@ -35,6 +35,7 @@ const IndexPage = () => {
     console.log(between(50, 10, 100))
     console.log(exists(''))
     console.log(either('x', 'y', 'x', 'z'))
+    console.log(defined(null))
   }, [])
 
   return (
@@ -57,6 +58,9 @@ const IndexPage = () => {
       >
         Content of ConditionalWrapper
       </ConditionalWrapper>
+      <MotionBox initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+        Motion Box
+      </MotionBox>
     </div>
   )
 }
