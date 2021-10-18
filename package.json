@@ -14,6 +14,13 @@
     "packages": [
       "packages/[!_]*"
     ],
+    "command": {
+      "publish": {
+        "ignoreChanges": [
+          "*.md"
+        ]
+      }
+    },
     "version": "independent"
   },
   "commitlint": {
