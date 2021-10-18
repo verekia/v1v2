@@ -18,4 +18,4 @@ yarn add @v1v2/chakra
 
 ---
 
-This library is part of [V1V2 Open Source](/).
+This library is part of [V1V2 Open Source](https://github.com/v1v2/v1v2).
