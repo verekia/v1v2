@@ -4,7 +4,15 @@ Integrate [NProgress](https://ricostacruz.com/nprogress/) with [Next](https://ne
 
 The progress bar will show up **when navigating between Next pages only**. It listens to Next's `Router` events to control the progress bar.
 
+## Installation
+
 First, make sure `nprogress` is installed in your project.
+
+```sh
+npm i @v1v2/nprogress-next
+# or
+yarn add @v1v2/nprogress-next
+```
 
 In your `_app` file:
 

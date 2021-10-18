@@ -4,6 +4,7 @@ import { Button } from '@chakra-ui/react'
 import { between, exists, either, wait } from '@v1v2/util'
 import { AlertTrigger, ModalTrigger } from '@v1v2/chakra'
 import { LinkButton } from '@v1v2/chakra-next'
+import { ConditionalWrapper, Defer, useDefer } from '@v1v2/react'
 
 const AlertContent = ({ closeAlert, leastDestructiveRef }) => (
   <>
@@ -23,6 +24,8 @@ const ModalContent = ({ closeModal }) => (
 )
 
 const IndexPage = () => {
+  const deferredBool = useDefer(1000)
+
   const handleClick = async () => {
     console.log(await wait())
     console.log('Delayed click')
@@ -46,6 +49,14 @@ const IndexPage = () => {
         )}
       </AlertTrigger>
       <LinkButton href="/other-page">Other page</LinkButton>
+      <Defer delay={1000}>Deferred</Defer>
+      <ConditionalWrapper
+        condition={deferredBool}
+        thenWrapper={children => <span style={{ color: 'green' }}>{children}</span>}
+        elseWrapper={children => <span style={{ color: 'red' }}>{children}</span>}
+      >
+        Content of ConditionalWrapper
+      </ConditionalWrapper>
     </div>
   )
 }
