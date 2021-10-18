@@ -17,3 +17,7 @@ yarn add @v1v2/util
 - [**exists**](src/exists#readme) – Returns `true` if not `null` or `undefined`
 - [**defined**](src/defined#readme) – Returns `true` if not `undefined`
 - [**wait**](src/wait#readme) – A `Promise`-based delay
+
+---
+
+This package is part of [V1V2 Open Source](https://github.com/v1v2/v1v2).

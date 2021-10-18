@@ -21,3 +21,7 @@ nanoid() // '4wEkBX8dJmMrzoXFBgQDwM'
 ```
 
 An [SQL function](src/nanoid/nanoid.sql) is also available.
+
+---
+
+This package is part of [V1V2 Open Source](https://github.com/v1v2/v1v2).

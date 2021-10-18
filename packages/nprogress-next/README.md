@@ -34,3 +34,7 @@ nprogressNext({
 ## delay
 
 The `delay` option avoids showing the progress bar if the page load was fast enough, to improve the user's perceived loading speed.
+
+---
+
+This package is part of [V1V2 Open Source](https://github.com/v1v2/v1v2).

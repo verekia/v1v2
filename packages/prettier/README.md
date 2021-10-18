@@ -20,3 +20,7 @@ Add `@v1v2/prettier` to your Prettier configuration. For instance in `package.js
 ```json
 "prettier": "@v1v2/prettier",
 ```
+
+---
+
+This package is part of [V1V2 Open Source](https://github.com/v1v2/v1v2).

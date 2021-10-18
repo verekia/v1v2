@@ -14,3 +14,7 @@ yarn add @v1v2/react
 
 - [**Defer**](src/Defer#readme) – Defers the rendering of a component (`useDefer` is also provided)
 - [**ConditionalWrapper**](src/ConditionalWrapper#readme) – Wraps content conditionally
+
+---
+
+This package is part of [V1V2 Open Source](https://github.com/v1v2/v1v2).
