@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@v1v2/chakra": "latest",
+    "@v1v2/next": "latest",
     "react-icons": "^4.3.1"
   },
   "devDependencies": {
