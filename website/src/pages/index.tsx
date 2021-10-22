@@ -36,7 +36,7 @@ const IndexPage = () => {
   return (
     <Box pos="relative" h="100vh">
       <HeadTitle />
-      <ColorModeToggle pos="absolute" top={3} right={3} />
+      <ColorModeToggle pos="absolute" top={3} right={3} zIndex={1} />
       <Container maxW="400px" backdropFilter="saturate(200%) blur(5px)" px="50px" pb="50px">
         <Box pt={16} pb={12}>
           <Logo fill={logoFill} />
