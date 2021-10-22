@@ -3,17 +3,15 @@ import { MotionBox } from '@v1v2/chakra'
 
 import ColorModeToggle from 'components/ColorModeToggle'
 import HeadTitle from 'components/HeadTitle'
+import ParticlesContainer from 'components/ParticlesContainer'
 
 import Logo from 'images/logo.svg'
 import { BookIcon, FeatherIcon, GithubIcon, StackIcon, TrainingIcon } from 'lib/icons'
 
-const MainButton = ({ href, children, icon, index }) => (
-  <MotionBox
-    initial={{ translateX: -100, opacity: 0 }}
-    animate={{ translateX: 0, opacity: 1 }}
-    // @ts-ignore
-    transition={{ duration: 0.2, delay: index * 0.2 }}
-  >
+const MainButton = ({ href, children, icon }) => {
+  const bg = useColorModeValue('gray.100', '#222')
+
+  return (
     <Button
       as="a"
       href={href}
@@ -23,21 +21,23 @@ const MainButton = ({ href, children, icon, index }) => (
       w="full"
       leftIcon={<Icon as={icon} boxSize={6} mr={2} />}
       justifyContent="left"
+      background={bg}
+      colorScheme="gray"
       pl={[5, 20]}
     >
       {children}
     </Button>
-  </MotionBox>
-)
+  )
+}
 
 const IndexPage = () => {
   const logoFill = useColorModeValue('#333', '#e3e3e3')
 
   return (
-    <>
+    <Box pos="relative" h="100vh">
       <HeadTitle />
       <ColorModeToggle pos="absolute" top={3} right={3} />
-      <Container maxW="330px">
+      <Container maxW="400px" backdropFilter="saturate(200%) blur(5px)" px="50px" pb="50px">
         <Box pt={16} pb={12}>
           <Logo fill={logoFill} />
           <Heading as="h2" size="md" textAlign="center" mt={5}>
@@ -52,13 +52,30 @@ const IndexPage = () => {
             { href: 'https://stack.v1v2.io', label: 'Stack', icon: StackIcon },
             { href: 'https://www.verekia.com/front-end/', label: 'Blog', icon: FeatherIcon },
           ].map((item, i) => (
-            <MainButton href={item.href} icon={item.icon} key={item.label} index={i}>
-              {item.label}
-            </MainButton>
+            <MotionBox
+              key={item.label}
+              animate={{ opacity: [1, 0.4, 1] }}
+              transition={{ duration: 0.8, delay: i * 0.15 }}
+            >
+              <MainButton href={item.href} icon={item.icon}>
+                {item.label}
+              </MainButton>
+            </MotionBox>
           ))}
         </VStack>
       </Container>
-    </>
+      <MotionBox
+        animate={{ opacity: [0, 1] }}
+        transition={{ delay: 1.5 }}
+        w="full"
+        h="full"
+        pos="absolute"
+        zIndex={-1}
+        top={0}
+      >
+        <ParticlesContainer />
+      </MotionBox>
+    </Box>
   )
 }
 
