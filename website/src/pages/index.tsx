@@ -2,6 +2,7 @@ import { Box, Button, Container, Icon, Heading, VStack, useColorModeValue } from
 import { MotionBox } from '@v1v2/chakra'
 
 import ColorModeToggle from 'components/ColorModeToggle'
+import HeadTitle from 'components/HeadTitle'
 
 import Logo from 'images/logo.svg'
 import { BookIcon, FeatherIcon, GithubIcon, StackIcon, TrainingIcon } from 'lib/icons'
@@ -34,6 +35,7 @@ const IndexPage = () => {
 
   return (
     <>
+      <HeadTitle />
       <ColorModeToggle pos="absolute" top={3} right={3} />
       <Container maxW="330px">
         <Box pt={16} pb={12}>

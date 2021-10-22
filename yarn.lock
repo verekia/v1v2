@@ -3976,6 +3976,11 @@
   resolved "https://registry.yarnpkg.com/@v1v2/next/-/next-1.0.0.tgz#7142fb97c26dcd7d53afab98b0c16249069a945a"
   integrity sha512-VAzv04ODpkzbFCQi6jgOG3rlOMTtUFmPJdp/RrU+EEBSJcybC8x1sBJsImtT+fhugfV71BD+QuIC/OStCBAVmA==
 
+"@v1v2/react@latest":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@v1v2/react/-/react-1.1.0.tgz#0866b81e5e5dd71f99c1c8e72a6426eb3690c37b"
+  integrity sha512-0IuaI8cx8so3+6FjkoAcpjoSzaOfT3St1ZQIMBrflC4O87sARw0SxS9sOsskFUX270IMQPy9Q+uU6FmsGhdLKQ==
+
 JSONStream@^1.0.4:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/JSONStream/-/JSONStream-1.3.5.tgz#3208c1f08d3a4d99261ab64f92302bc15e111ca0"
