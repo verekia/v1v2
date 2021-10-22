@@ -25,7 +25,7 @@ With the default setup, you need:
 - `/icon-512.png` (512x512)
 - `/manifest.json`
 
-Make sure to optimize the files, with [TinyPNG](https://tinypng.com/) or [SVGOMG](https://jakearchibald.github.io/svgomg/) for instance.
+Make sure to optimize the files, with [TinyPNG](https://tinypng.com/) or [SVGOMG](https://jakearchibald.github.io/svgomg/) for instance. You can use a generator such as [Favicomatic](https://favicomatic.com/) to create the `.ico` file.
 
 ## Next.js
 
