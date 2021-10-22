@@ -45,14 +45,16 @@ const IndexPage = () => {
   return (
     <Box pos="relative" h="100vh">
       <HeadTitle />
-      <ColorModeToggle pos="absolute" top={3} right={3} zIndex={1} />
       <Center h="full">
         <Container maxW="330px">
-          <Box pb={12}>
+          <Box pb={5}>
             <Logo fill={logoFill} />
-            <Heading as="h2" size="md" textAlign="center" mt={5}>
+            <Heading as="h2" size="md" textAlign="center" my={5}>
               Let's upgrade your codebase
             </Heading>
+            <Center>
+              <ColorModeToggle />
+            </Center>
           </Box>
           <VStack align="stretch">
             {[

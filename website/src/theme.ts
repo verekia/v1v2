@@ -4,7 +4,7 @@ export const darkBg = '#181818'
 export const lightBg = '#fff'
 
 const config: ThemeConfig = {
-  initialColorMode: 'dark',
+  initialColorMode: 'light',
   useSystemColorMode: false,
 }
 
@@ -17,11 +17,9 @@ const theme = extendTheme({
         color: colorMode === 'dark' ? '#e3e3e3' : '#333',
       },
       '#tsparticles': { height: '100%' },
+      '*': { WebkitTapHighlightColor: 'transparent' },
+      '.chakra-switch__track': { boxShadow: 'none !important' },
     }),
-  },
-  components: {
-    Button: { baseStyle: { WebkitTapHighlightColor: 'transparent' } },
-    Link: { baseStyle: { WebkitTapHighlightColor: 'transparent' } },
   },
 })
 
