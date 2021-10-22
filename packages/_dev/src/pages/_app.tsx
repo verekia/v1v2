@@ -1,5 +1,4 @@
 import { ChakraProvider } from '@chakra-ui/react'
-
 import { wrapPage } from '@v1v2/next'
 import { nprogressNext } from '@v1v2/nprogress-next'
 

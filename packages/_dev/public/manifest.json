@@ -1,0 +1,11 @@
+{
+  "short_name": "V1V2 Dev",
+  "name": "V1V2 Dev",
+  "start_url": "/",
+  "background_color": "#111",
+  "theme_color": "#111",
+  "icons": [
+    { "src": "/icon-192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/icon-512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

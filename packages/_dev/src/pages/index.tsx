@@ -4,8 +4,8 @@ import { Button } from '@chakra-ui/react'
 import { between, exists, either, wait, defined } from '@v1v2/util'
 import { AlertTrigger, ModalTrigger, MotionBox } from '@v1v2/chakra'
 import { LinkButton } from '@v1v2/chakra-next'
-import { ConditionalWrapper, Defer, useDefer } from '@v1v2/react'
 import { nanoid } from '@v1v2/nanoid'
+import { ConditionalWrapper, Defer, useDefer } from '@v1v2/react'
 
 const AlertContent = ({ closeAlert, leastDestructiveRef }) => (
   <>

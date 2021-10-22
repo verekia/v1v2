@@ -12,8 +12,9 @@ yarn add @v1v2/react
 
 ## Components
 
-- [**Defer**](src/Defer#readme) – Defers the rendering of a component (`useDefer` is also provided)
 - [**ConditionalWrapper**](src/ConditionalWrapper#readme) – Wraps content conditionally
+- [**Defer**](src/Defer#readme) – Defers the rendering of a component (`useDefer` is also provided)
+- [**HeadCosmetics**](src/HeadCosmetics#readme) – Easy setup for favicons, manifest, and theme color
 
 ---
 
