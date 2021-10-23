@@ -1,4 +1,5 @@
 import { extendTheme, ThemeConfig } from '@chakra-ui/react'
+import { withBodyColorMode, withFocusVisible, withNoWebkitTapHighlight } from '@v1v2/chakra'
 
 export const darkBg = '#181818'
 export const lightBg = '#fff'
@@ -8,19 +9,14 @@ const config: ThemeConfig = {
   useSystemColorMode: false,
 }
 
-const theme = extendTheme({
-  config,
-  styles: {
-    global: ({ colorMode }) => ({
-      body: {
-        background: colorMode === 'dark' ? darkBg : lightBg,
-        color: colorMode === 'dark' ? '#e3e3e3' : '#333',
-      },
-      '#tsparticles': { height: '100%' },
-      '*': { WebkitTapHighlightColor: 'transparent' },
-      '.chakra-switch__track': { boxShadow: 'none !important' },
-    }),
-  },
-})
+const theme = extendTheme(
+  withNoWebkitTapHighlight(),
+  withFocusVisible(),
+  withBodyColorMode({ background: [lightBg, darkBg], color: ['#333', '#e3e3e3'] }),
+  {
+    config,
+    styles: { global: { '#tsparticles': { height: '100%' } } },
+  }
+)
 
 export default theme
