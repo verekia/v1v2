@@ -24,7 +24,10 @@
     "version": "independent"
   },
   "commitlint": {
-    "extends": "@commitlint/config-conventional"
+    "extends": [
+      "@commitlint/config-conventional",
+      "@commitlint/config-lerna-scopes"
+    ]
   },
   "jest": {
     "preset": "ts-jest",
@@ -49,6 +52,7 @@
   "devDependencies": {
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
+    "@commitlint/config-lerna-scopes": "^13.2.0",
     "@parcel/packager-ts": "^2.0.0",
     "@parcel/transformer-typescript-types": "^2.0.0",
     "@types/jest": "^27.0.2",
