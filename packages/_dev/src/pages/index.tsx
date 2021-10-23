@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import { Button } from '@chakra-ui/react'
+import { Button, useColorMode } from '@chakra-ui/react'
 import { between, exists, either, wait, defined } from '@v1v2/util'
 import { AlertTrigger, ModalTrigger, MotionBox } from '@v1v2/chakra'
 import { LinkButton } from '@v1v2/chakra-next'
@@ -26,6 +26,7 @@ const ModalContent = ({ closeModal }) => (
 
 const IndexPage = () => {
   const deferredBool = useDefer(1000)
+  const { toggleColorMode } = useColorMode()
 
   const handleClick = async () => {
     console.log(await wait())
@@ -63,6 +64,7 @@ const IndexPage = () => {
       <MotionBox initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         Motion Box
       </MotionBox>
+      <Button onClick={toggleColorMode}>Color mode toggle</Button>
     </div>
   )
 }

@@ -16,6 +16,12 @@ yarn add @v1v2/chakra
 - [**ModalTrigger**](src/ModalTrigger#readme) – Combines a `Modal` and a trigger element
 - [**MotionBox**](src/MotionBox#readme) – A Chakra `Box` enriched with Framer Motion capabilities
 
+## Theme Extensions
+
+- [**withBodyColorMode**](src/withBodyColorMode#readme) – Background and text color setup for light and dark mode
+- [**withFocusVisible**](src/withFocusVisible#readme) – Fix for `focus-visible`
+- [**withNoWebkitTapHighlight**](src/withNoWebkitTapHighlight#readme) – Disables mobile Chrome's blue highlight globally (⚠️ accessibility concerns)
+
 ---
 
 This package is part of [V1V2 Open Source](https://github.com/v1v2/v1v2).

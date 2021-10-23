@@ -1,3 +1,6 @@
 export { default as AlertTrigger } from './AlertTrigger/AlertTrigger'
 export { default as ModalTrigger } from './ModalTrigger/ModalTrigger'
 export { default as MotionBox } from './MotionBox/MotionBox'
+export { default as withBodyColorMode } from './withBodyColorMode/withBodyColorMode'
+export { default as withFocusVisible } from './withFocusVisible/withFocusVisible'
+export { default as withNoWebkitTapHighlight } from './withNoWebkitTapHighlight/withNoWebkitTapHighlight'
