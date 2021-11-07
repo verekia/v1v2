@@ -15,6 +15,7 @@ yarn add @v1v2/chakra
 - [**AlertTrigger**](src/AlertTrigger#readme) – Combines an `Alert` and a trigger element
 - [**ModalTrigger**](src/ModalTrigger#readme) – Combines a `Modal` and a trigger element
 - [**MotionBox**](src/MotionBox#readme) – A Chakra `Box` enriched with Framer Motion capabilities
+- [**FullHStack**](src/FullStack#readme) and [**FullVStack**](src/FullStack#readme) – Full-height `HStack` and full-width `VStack`
 
 ## Theme Extensions
 

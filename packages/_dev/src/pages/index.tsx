@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 
-import { Button, useColorMode } from '@chakra-ui/react'
+import { Box, Button, HStack, VStack, useColorMode } from '@chakra-ui/react'
 import { between, exists, either, wait, defined } from '@v1v2/util'
-import { AlertTrigger, ModalTrigger, MotionBox } from '@v1v2/chakra'
+import { AlertTrigger, ModalTrigger, MotionBox, FullVStack, FullHStack } from '@v1v2/chakra'
 import { LinkButton } from '@v1v2/chakra-next'
 import { nanoid } from '@v1v2/nanoid'
 import { ConditionalWrapper, Defer, useDefer } from '@v1v2/react'
@@ -65,6 +65,29 @@ const IndexPage = () => {
         Motion Box
       </MotionBox>
       <Button onClick={toggleColorMode}>Color mode toggle</Button>
+      <br />
+      Normal HStack / VStack
+      <HStack h={20}>
+        <Box bg="blue.200">1</Box>
+        <Box bg="blue.200">2</Box>
+        <Box bg="blue.200">3</Box>
+      </HStack>
+      <VStack>
+        <Box bg="blue.200">1</Box>
+        <Box bg="blue.200">2</Box>
+        <Box bg="blue.200">3</Box>
+      </VStack>
+      FullHStack / FullVStack
+      <FullHStack h={20}>
+        <Box bg="blue.200">1</Box>
+        <Box bg="blue.200">2</Box>
+        <Box bg="blue.200">3</Box>
+      </FullHStack>
+      <FullVStack>
+        <Box bg="blue.200">1</Box>
+        <Box bg="blue.200">2</Box>
+        <Box bg="blue.200">3</Box>
+      </FullVStack>
     </div>
   )
 }
