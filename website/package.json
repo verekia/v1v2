@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@v1v2/chakra": "latest",
+    "@v1v2/chakra-next": "latest",
     "@v1v2/next": "latest",
     "@v1v2/react": "latest",
     "focus-visible": "^5.2.0",
