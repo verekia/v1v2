@@ -1,14 +1,5 @@
-import {
-  Box,
-  Button,
-  Center,
-  Container,
-  Icon,
-  Heading,
-  VStack,
-  useColorModeValue,
-} from '@chakra-ui/react'
-import { MotionBox } from '@v1v2/chakra'
+import { Box, Button, Center, Container, Icon, Heading, useColorModeValue } from '@chakra-ui/react'
+import { MotionBox, FullVStack } from '@v1v2/chakra'
 
 import ColorModeToggle from 'components/ColorModeToggle'
 import HeadTitle from 'components/HeadTitle'
@@ -56,7 +47,7 @@ const IndexPage = () => {
               <ColorModeToggle />
             </Center>
           </Box>
-          <VStack align="stretch">
+          <FullVStack>
             {[
               { href: 'https://github.com/v1v2/v1v2', label: 'Open Source', icon: GithubIcon },
               {
@@ -78,7 +69,7 @@ const IndexPage = () => {
                 </MainButton>
               </MotionBox>
             ))}
-          </VStack>
+          </FullVStack>
         </Container>
       </Center>
       <MotionBox

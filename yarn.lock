@@ -3977,9 +3977,9 @@
     "@types/yargs-parser" "*"
 
 "@v1v2/chakra@latest":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@v1v2/chakra/-/chakra-1.1.0.tgz#2f2996af9e74def4a5597798461c153f36bd6bd5"
-  integrity sha512-UjYVev14K5PWdjgNeEFByqOM64sLKlLMzx1G8+Y5BR08Wgi2uZiLpIfiFJE37+TGIxUE9Gd04bap1U49mk/xrQ==
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@v1v2/chakra/-/chakra-1.2.0.tgz#5e109acc45347730379af5393f067e319ac559ff"
+  integrity sha512-780SWC+79gxFjXve9sXihJ5SQImj5vMQZa6oz15Kv5tOg/lM1YTIn8MUCHlt02uPzQXARYceQzZo++mZ7SNLKA==
 
 "@v1v2/next@latest":
   version "1.0.0"
