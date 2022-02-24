@@ -1,4 +1,13 @@
-import { Box, Image, Heading, Text, useColorModeValue, VStack } from '@chakra-ui/react'
+import {
+  Box,
+  Button,
+  Center,
+  Image,
+  Heading,
+  Text,
+  useColorModeValue,
+  VStack,
+} from '@chakra-ui/react'
 
 import Layout from 'components/layout/Layout'
 
@@ -81,12 +90,24 @@ const GameDevPage = () => (
         Phase 2: Sonic-like platformer
       </Heading>
       <Learned>
-        <strong>What I want to implement:</strong> Creating a basic 2D platformer with enemies,
-        coins to collect, and an end goal. Adding a static UI to display the number of coins, and
-        making a start screen. The character will have multiple animations based on if they are
-        running, jumping, or idle. The character should also be able to shoot a projectile that can
-        kill enemies.
+        <strong>Things learned:</strong> Making a launch menu and UI overlay, making a 2D scene with
+        sprites, colliders, rigid bodies, managing various game objects that interact with each
+        other, making projectiles, implementing a pub/sub event system, decoupling behaviors of a
+        single entity into multiple scripts. I also learned some C# features and practiced OOP.
       </Learned>
+      <Text>
+        I created a basic 2D platformer with enemies that the player can shoot, coins to collect,
+        and an end goal. It has a parallax effect, a static UI to display the number of coins, and a
+        start screen. The character has different sprites depending on if he is idle or jumping. The
+        player can die by touching enemies or falling off the platforms.
+      </Text>
+      <Text fontWeight="bold">Time spent: 2 days</Text>
+      <Image src="/img/gamedev/platformer.png" maxW="450px" borderRadius={4} alignSelf="center" />
+      <Center w="full">
+        <a href="https://v1v2-platformer.vercel.app/" target="_blank">
+          <Button colorScheme="blue">Play the game</Button>
+        </a>
+      </Center>
       <Heading as="h2" size="lg" alignSelf="center" pt={4} pb={3}>
         Phase 3: Top-down city management game
       </Heading>
@@ -96,7 +117,14 @@ const GameDevPage = () => (
         mouse on a terrain grid. The game ends when the player has gathered some amount of gold.
       </Learned>
       <Heading as="h2" size="lg" alignSelf="center" pt={4} pb={3}>
-        Phase 4: Top-down multiplayer arena
+        Phase 4: Tower defense
+      </Heading>
+      <Learned>
+        <strong>What I want to implement:</strong> A simple tower defense game on a single map, a
+        few tower types that shoot projectiles on waves of enemies that keep getting stronger.
+      </Learned>
+      <Heading as="h2" size="lg" alignSelf="center" pt={4} pb={3}>
+        Phase 5: Top-down multiplayer arena
       </Heading>
       <Learned>
         <strong>What I want to implement:</strong> A game where multiple players can spawn on a
