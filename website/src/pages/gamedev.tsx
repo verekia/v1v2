@@ -99,7 +99,7 @@ const GameDevPage = () => (
         I created a basic 2D platformer with enemies that the player can shoot, coins to collect,
         and an end goal. It has a parallax effect, a static UI to display the number of coins, and a
         start screen. The character has different sprites depending on if he is idle or jumping. The
-        player can die by touching enemies or falling off the platforms.
+        player can die by touching enemies or falling off the platforms. Music by David Fesliyan.
       </Text>
       <Text fontWeight="bold">Time spent: 2 days</Text>
       <Image src="/img/gamedev/platformer.png" maxW="450px" borderRadius={4} alignSelf="center" />
