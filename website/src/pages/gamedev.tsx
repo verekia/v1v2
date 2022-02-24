@@ -103,11 +103,16 @@ const GameDevPage = () => (
       </Text>
       <Text fontWeight="bold">Time spent: 2 days</Text>
       <Image src="/img/gamedev/platformer.png" maxW="450px" borderRadius={4} alignSelf="center" />
-      <Center w="full">
-        <a href="https://v1v2-platformer.vercel.app/" target="_blank">
-          <Button colorScheme="blue">Play the game</Button>
-        </a>
-      </Center>
+      <Box w="full">
+        <Center>
+          <a href="https://v1v2-platformer.vercel.app/" target="_blank">
+            <Button colorScheme="blue">Play the game</Button>
+          </a>
+        </Center>
+        <Text textAlign="center" mt={3}>
+          Space to jump – Mouse click or Left Ctrl to shoot
+        </Text>
+      </Box>
       <Heading as="h2" size="lg" alignSelf="center" pt={4} pb={3}>
         Phase 3: Top-down city management game
       </Heading>
