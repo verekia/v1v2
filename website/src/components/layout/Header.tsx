@@ -39,14 +39,14 @@ const Header = (boxProps: BoxProps) => (
             V1V2
           </Flex>
         </Link>
-        <HStack>
+        {/* <HStack>
           <LinkButton variant="ghost" href={INDEX_PATH}>
             Home
           </LinkButton>
           <LinkButton variant="ghost" href={GAMEDEV_PATH}>
             Game Dev
           </LinkButton>
-        </HStack>
+        </HStack> */}
         <ColorModeToggle />
       </Flex>
     </Container>

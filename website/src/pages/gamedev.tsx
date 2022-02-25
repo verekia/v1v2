@@ -77,23 +77,38 @@ const GameDevPage = () => (
         Marley songs, and djembes that play a sound when you hit them. Then, in Unity, I made a
         similar island that includes the hands and physics management provided by Oculus.
       </Text>
-      <Image src="/img/gamedev/island.png" maxW="450px" borderRadius={4} alignSelf="center" />
-      <Image src="/img/gamedev/island-2.png" maxW="450px" borderRadius={4} alignSelf="center" />
+      <Image
+        src="/img/gamedev/island.png"
+        maxW="450px"
+        borderRadius={4}
+        alignSelf="center"
+        w="full"
+      />
+      <Image
+        src="/img/gamedev/island-2.png"
+        maxW="450px"
+        borderRadius={4}
+        alignSelf="center"
+        w="full"
+      />
+      <Text fontWeight="bold" textAlign="center" mt={3} w="full">
+        Time spent: 7 days
+      </Text>
       <Text>
         From my very little hands-on experience, I like both Unity and Unreal Engine, but I think{' '}
         <strong>Unity is a better choice in my current situation</strong> (to develop VR games for
         Quest 2, and 2D games on an M1 Mac). So I will use Unity to ramp up my game development
         skills.
       </Text>
-      <Text fontWeight="bold">Time spent: 7 days</Text>
       <Heading as="h2" size="lg" alignSelf="center" pt={4} pb={3}>
         Phase 2: Sonic-like platformer
       </Heading>
       <Learned>
         <strong>Things learned:</strong> Making a launch menu and UI overlay, making a 2D scene with
         sprites, colliders, rigid bodies, managing various game objects that interact with each
-        other, making projectiles, implementing a pub/sub event system, decoupling behaviors of a
-        single entity into multiple scripts. I also learned some C# features and practiced OOP.
+        other, making projectiles, implementing a pub/sub event system, user preferences, decoupling
+        behaviors of a single entity into multiple scripts. I also learned some C# features and
+        practiced OOP.
       </Learned>
       <Text>
         I created a basic 2D platformer with enemies that the player can shoot, coins to collect,
@@ -101,16 +116,21 @@ const GameDevPage = () => (
         start screen. The character has different sprites depending on if he is idle or jumping. The
         player can die by touching enemies or falling off the platforms. Music by David Fesliyan.
       </Text>
-      <Text fontWeight="bold">Time spent: 2 days</Text>
-      <Image src="/img/gamedev/platformer.png" maxW="450px" borderRadius={4} alignSelf="center" />
+      <Image
+        src="/img/gamedev/platformer.png"
+        maxW="450px"
+        borderRadius={4}
+        alignSelf="center"
+        w="full"
+      />
       <Box w="full">
         <Center>
           <a href="https://v1v2-platformer.vercel.app/" target="_blank">
             <Button colorScheme="blue">Play the game</Button>
           </a>
         </Center>
-        <Text textAlign="center" mt={3}>
-          Space to jump – Mouse click or Left Ctrl to shoot
+        <Text fontWeight="bold" textAlign="center" mt={3}>
+          Time spent: 2.5 days
         </Text>
       </Box>
       <Heading as="h2" size="lg" alignSelf="center" pt={4} pb={3}>
