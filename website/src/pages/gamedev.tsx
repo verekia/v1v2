@@ -33,7 +33,7 @@ const GameDevPage = () => (
         various genres first, to practice specific skills.
       </Text>
       <Heading as="h2" size="lg" alignSelf="center" pt={4} pb={3}>
-        Phase 1: Playing around and first VR tests
+        First tests and a VR island
       </Heading>
       <Learned>
         <strong>Things learned</strong>: Basics of Unity, Unreal Engine, and fundamental game dev
@@ -91,6 +91,10 @@ const GameDevPage = () => (
         alignSelf="center"
         w="full"
       />
+      <Text alignSelf="center" textAlign="center" mt={3} maxW="500px">
+        I wouldn't really call these functioning "games", but creating a world and walking around
+        inside it was fascinating and exhilarating.
+      </Text>
       <Text fontWeight="bold" textAlign="center" mt={3} w="full">
         Time spent: 7 days
       </Text>
@@ -101,7 +105,7 @@ const GameDevPage = () => (
         skills.
       </Text>
       <Heading as="h2" size="lg" alignSelf="center" pt={4} pb={3}>
-        Phase 2: Sonic-like platformer
+        Game 1: Sonic-like platformer
       </Heading>
       <Learned>
         <strong>Things learned:</strong> Making a launch menu and UI overlay, making a 2D scene with
@@ -114,7 +118,7 @@ const GameDevPage = () => (
         I created a basic 2D platformer with enemies that the player can shoot, coins to collect,
         and an end goal. It has a parallax effect, a static UI to display the number of coins, and a
         start screen. The character has different sprites depending on if he is idle or jumping. The
-        player can die by touching enemies or falling off the platforms. Music by David Fesliyan.
+        player can die by touching enemies or falling off the platforms.
       </Text>
       <Image
         src="/img/gamedev/platformer.png"
@@ -126,7 +130,7 @@ const GameDevPage = () => (
       <Box w="full">
         <Center>
           <a href="https://v1v2-platformer.vercel.app/" target="_blank">
-            <Button colorScheme="blue">Play the game</Button>
+            <Button colorScheme="blue">Play the game (desktop-only)</Button>
           </a>
         </Center>
         <Text fontWeight="bold" textAlign="center" mt={3}>
@@ -134,28 +138,64 @@ const GameDevPage = () => (
         </Text>
       </Box>
       <Heading as="h2" size="lg" alignSelf="center" pt={4} pb={3}>
-        Phase 3: Top-down city management game
+        Game 2: Top-down city management game
       </Heading>
       <Learned>
-        <strong>What I want to implement:</strong> Managing resources such as wood, gold, food,
-        electricity. Positioning simple buildings that cost resources or create resources using the
-        mouse on a terrain grid. The game ends when the player has gathered some amount of gold.
+        <strong>What I learned: </strong> The biggest challenge was positioning buildings on a grid
+        with the mouse and only allowing building on empty spaces. It was surprisingly easy and
+        didn't involve much math. I should have created config objects for building types instead of
+        having 8 variables for everything (cost, gains, space taken, model, etc). I had to balance
+        costs and gains to make the gameplay interesting. I also learned how to make a responsive
+        UI.
       </Learned>
+      <Text>
+        I created a static-view 3D strategy game where you have to construct buildings and manage
+        resources such as food, people, and energy to generate money. The goal is to reach 1000
+        money to win as fast as possible (my record is 44 days).
+      </Text>
+      <Image
+        src="/img/gamedev/city.png"
+        maxW="450px"
+        borderRadius={4}
+        alignSelf="center"
+        w="full"
+      />
+      <Box w="full">
+        <Center>
+          <a href="https://v1v2-city.vercel.app/" target="_blank">
+            <Button colorScheme="blue">Play the game (desktop-only)</Button>
+          </a>
+        </Center>
+        <Text fontWeight="bold" textAlign="center" mt={3}>
+          Time spent: 1 day
+        </Text>
+      </Box>
       <Heading as="h2" size="lg" alignSelf="center" pt={4} pb={3}>
-        Phase 4: Tower defense
+        Game 3: Tower defense
       </Heading>
       <Learned>
         <strong>What I want to implement:</strong> A simple tower defense game on a single map, a
-        few tower types that shoot projectiles on waves of enemies that keep getting stronger.
+        few tower types that shoot projectiles on waves of enemies that keep getting stronger. The
+        camera should be able to move. Enemies should be animated. Projectiles must use real
+        physics, some should do splash damage. Use object pooling. Use classes and inheritance to
+        represent objects.
       </Learned>
       <Heading as="h2" size="lg" alignSelf="center" pt={4} pb={3}>
-        Phase 5: Top-down multiplayer arena
+        Game 4: Quake-like multiplayer arena
       </Heading>
       <Learned>
-        <strong>What I want to implement:</strong> A game where multiple players can spawn on a
+        <strong>What I want to implement:</strong> An FPS where multiple players can spawn on a
         simple map, and fight either AI enemies or each other. The goal is to beat as many enemies
         as possible.
       </Learned>
+      {/* <Text>Things I need to learn</Text>
+      <UnorderedList>
+        <ListItem>Custom WebGL templates</ListItem>
+        <ListItem>Skeleton sprites / meshes</ListItem>
+        <ListItem>Animator</ListItem>
+        <ListItem>Object Pooling</ListItem>
+        <ListItem>Networking</ListItem>
+      </UnorderedList> */}
     </VStack>
   </>
 )
