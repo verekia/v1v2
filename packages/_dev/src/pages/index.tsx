@@ -2,7 +2,14 @@ import { useEffect } from 'react'
 
 import { Box, Button, HStack, VStack, useColorMode } from '@chakra-ui/react'
 import { between, exists, either, wait, defined } from '@v1v2/util'
-import { AlertTrigger, ModalTrigger, MotionBox, FullVStack, FullHStack } from '@v1v2/chakra'
+import {
+  AlertTrigger,
+  ModalTrigger,
+  MotionBox,
+  FullVStack,
+  FullHStack,
+  useModal,
+} from '@v1v2/chakra'
 import { LinkButton } from '@v1v2/chakra-next'
 import { nanoid } from '@v1v2/nanoid'
 import { ConditionalWrapper, Defer, useDefer } from '@v1v2/react'
@@ -24,9 +31,17 @@ const ModalContent = ({ closeModal }) => (
   </>
 )
 
+const ModalContent2 = ({ closeModal }) => (
+  <>
+    <div>Modal Content 2</div>
+    <Button onClick={closeModal}>Close</Button>
+  </>
+)
+
 const IndexPage = () => {
   const deferredBool = useDefer(1000)
   const { toggleColorMode } = useColorMode()
+  const { ModalSystem, closeModal: closeModal2, openModal: openModal2 } = useModal(ModalContent2)
 
   const handleClick = async () => {
     console.log(await wait())
@@ -47,6 +62,9 @@ const IndexPage = () => {
       <ModalTrigger trigger={openModal => <Button onClick={openModal}>Open Modal</Button>}>
         {closeModal => <ModalContent closeModal={closeModal} />}
       </ModalTrigger>
+      <ModalSystem trigger={<Button onClick={openModal2}>Open Modal 2</Button>}>
+        <ModalContent2 closeModal={closeModal2} />
+      </ModalSystem>
       <AlertTrigger trigger={openAlert => <Button onClick={openAlert}>Open Alert</Button>}>
         {({ closeAlert, leastDestructiveRef }) => (
           <AlertContent closeAlert={closeAlert} leastDestructiveRef={leastDestructiveRef} />
