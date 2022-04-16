@@ -4,11 +4,11 @@ import {
   AlertDialog,
   AlertDialogContent,
   AlertDialogOverlay,
-  AlertProps,
+  AlertDialogProps,
   useDisclosure,
 } from '@chakra-ui/react'
 
-type AlertPropsWithOmission = Omit<AlertProps, 'children' | 'isOpen' | 'onClose'>
+type AlertPropsWithOmission = Omit<AlertDialogProps, 'children' | 'isOpen' | 'onClose'>
 
 interface Props {
   trigger: (openAlert: () => void) => ReactElement
@@ -20,9 +20,11 @@ interface Props {
     closeAlert: () => void
   }) => ReactElement
   alertProps?: AlertPropsWithOmission
+  overlayProps?: any
+  contentProps?: any
 }
 
-const AlertTrigger = ({ trigger, children, alertProps }: Props) => {
+const AlertTrigger = ({ trigger, children, alertProps, overlayProps, contentProps }: Props) => {
   const { isOpen, onOpen: openAlert, onClose: closeAlert } = useDisclosure()
   const leastDestructiveRef = useRef(null)
 
@@ -35,8 +37,10 @@ const AlertTrigger = ({ trigger, children, alertProps }: Props) => {
         onClose={closeAlert}
         {...alertProps}
       >
-        <AlertDialogOverlay>
-          <AlertDialogContent>{children({ leastDestructiveRef, closeAlert })}</AlertDialogContent>
+        <AlertDialogOverlay {...overlayProps}>
+          <AlertDialogContent {...contentProps}>
+            {children({ leastDestructiveRef, closeAlert })}
+          </AlertDialogContent>
         </AlertDialogOverlay>
       </AlertDialog>
     </>
