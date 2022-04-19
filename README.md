@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="/website/public/img/logo/v1v2-chevron-text-black-logo.svg" alt="V1V2 Logo" width="300" height="66" />
+    <img src="/logo.svg" alt="V1V2 Logo" width="300" height="66" />
 
   <p align="center">
     Let's upgrade your codebase
