@@ -2,7 +2,9 @@
     <img src="/logo.svg" alt="V1V2 Logo" width="300" height="66" />
 
   <p align="center">
-    Let's upgrade your codebase
+      Let's take your your codebase
+      <br />
+      to the <em>next level</em>
     <br />
     <br />
     <a href="https://www.v1v2.io"><strong>Website »</strong></a>
