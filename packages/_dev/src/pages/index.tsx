@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 
-import { Box, Button, HStack, VStack, useColorMode } from '@chakra-ui/react'
+import { Box, Button, HStack, VStack, useColorMode, Menu } from '@chakra-ui/react'
 import { between, exists, either, wait, defined } from '@v1v2/util'
 import {
   AlertTrigger,
@@ -10,7 +10,7 @@ import {
   FullHStack,
   // useModal,
 } from '@v1v2/chakra'
-import { LinkButton } from '@v1v2/chakra-next'
+import { Link, LinkButton, LinkIconButton, LinkMenuItem } from '@v1v2/chakra-next'
 import { nanoid } from '@v1v2/nanoid'
 import { ConditionalWrapper, Defer, useDefer } from '@v1v2/react'
 
@@ -73,7 +73,12 @@ const IndexPage = () => {
           <AlertContent closeAlert={closeAlert} leastDestructiveRef={leastDestructiveRef} />
         )}
       </AlertTrigger>
+      <Link href="/other-page">Other page</Link>
       <LinkButton href="/other-page">Other page</LinkButton>
+      <LinkIconButton icon={<span>Icon</span>} href="/other-page" />
+      <Menu>
+        <LinkMenuItem href="/other-page">Other page</LinkMenuItem>
+      </Menu>
       <Defer delay={1000}>Deferred</Defer>
       <ConditionalWrapper
         condition={deferredBool}
