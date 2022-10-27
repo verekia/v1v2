@@ -5,15 +5,17 @@ import Link, { LinkProps } from 'next/link'
 
 interface Props {
   href: string
-  nextLinkProps?: Omit<LinkProps, 'href' | 'as'>
+  nextLinkProps?: Omit<LinkProps, 'href' | 'passHref' | 'as'>
 }
 
 export type LinkButtonProps = Props & ButtonProps
 
 const LinkButton = ({ href, nextLinkProps, children, ...buttonProps }: LinkButtonProps) => (
-  <Button as={Link} href={href} {...nextLinkProps} {...buttonProps}>
-    {children}
-  </Button>
+  <Link href={href} passHref legacyBehavior {...nextLinkProps}>
+    <Button as="a" {...buttonProps}>
+      {children}
+    </Button>
+  </Link>
 )
 
 export default LinkButton

@@ -5,15 +5,15 @@ import NextLink, { LinkProps as NextLinkProps } from 'next/link'
 
 interface Props {
   href: string
-  nextLinkProps?: Omit<NextLinkProps, 'href' | 'as'>
+  nextLinkProps?: Omit<NextLinkProps, 'href' | 'passHref' | 'as'>
 }
 
 export type LinkProps = Props & ChakraLinkProps
 
 const Link = ({ href, nextLinkProps, children, ...chakraLinkProps }: LinkProps) => (
-  <ChakraLink as={NextLink} href={href} {...nextLinkProps} {...chakraLinkProps}>
-    {children}
-  </ChakraLink>
+  <NextLink href={href} passHref legacyBehavior {...nextLinkProps}>
+    <ChakraLink {...chakraLinkProps}>{children}</ChakraLink>
+  </NextLink>
 )
 
 export default Link

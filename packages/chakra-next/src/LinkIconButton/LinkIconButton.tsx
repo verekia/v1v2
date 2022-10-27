@@ -5,7 +5,7 @@ import Link, { LinkProps } from 'next/link'
 
 interface Props {
   href: string
-  nextLinkProps?: Omit<LinkProps, 'href' | 'as'>
+  nextLinkProps?: Omit<LinkProps, 'href' | 'passHref' | 'as'>
 }
 
 export type LinkIconButtonProps = Props & IconButtonProps
@@ -16,9 +16,11 @@ const LinkIconButton = ({
   children,
   ...iconButtonProps
 }: LinkIconButtonProps) => (
-  <IconButton as={Link} href={href} {...nextLinkProps} {...iconButtonProps}>
-    {children}
-  </IconButton>
+  <Link href={href} passHref legacyBehavior {...nextLinkProps}>
+    <IconButton as="a" {...iconButtonProps}>
+      {children}
+    </IconButton>
+  </Link>
 )
 
 export default LinkIconButton
