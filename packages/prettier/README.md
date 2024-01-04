@@ -6,6 +6,7 @@ A Prettier configuration that enforces:
 - No semicolons
 - Single quotes
 - Avoiding arrow function parens
+- ES5 trailing commas
 
 ## Installation
 
