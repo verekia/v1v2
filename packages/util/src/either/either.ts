@@ -3,8 +3,8 @@ const either = (
   ...comparisons: [
     firstComparison: unknown,
     secondComparison: unknown,
-    ...moreComparisons: unknown[]
+    ...moreComparisons: unknown[],
   ]
-) => comparisons.includes(value)
+): boolean => comparisons.includes(value)
 
 export default either
